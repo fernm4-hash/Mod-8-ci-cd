@@ -14,3 +14,8 @@ class MyAppTests(TestCase):
         response = self.client.get('/about/')
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "About Page")
+
+    def test_api_hello_view(self):
+        response = self.client.get('/api/hello/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {"message": "Hello, API!"})
