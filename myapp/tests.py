@@ -18,4 +18,4 @@ class MyAppTests(TestCase):
     def test_api_hello_view(self):
         response = self.client.get('/api/hello/')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"message": "Hello, API!"})
+        self.assertEqual(response.json(), {"message": "Hello, API!", "course": "CSC 325"})

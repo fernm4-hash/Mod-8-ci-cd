@@ -10,5 +10,5 @@ def about(request):
     return HttpResponse("<h1>About Page</h1>")
 
 def api_hello(request):
-    return JsonResponse({"message": "Hello, API!"})
+    return JsonResponse({"message": "Hello, API!", "course": "CSC 325"})
     
